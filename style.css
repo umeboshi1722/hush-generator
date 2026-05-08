@@ -133,3 +133,22 @@ input[type="number"] { width: 140px; }
 }
 
 .trim-row label { margin-bottom: 0; white-space: nowrap; }
+
+textarea {
+  width: 100%;
+  background: #0f1117;
+  border: 1px solid #2d3348;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding: 10px 14px;
+  outline: none;
+  resize: vertical;
+  min-height: 90px;
+  transition: border-color 0.2s;
+}
+
+textarea:focus { border-color: #6366f1; }
+textarea::placeholder { color: #374151; }

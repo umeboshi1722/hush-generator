@@ -1,0 +1,135 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 16px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #94a3b8;
+  margin-bottom: 36px;
+}
+
+.card {
+  background: #1e2130;
+  border: 1px solid #2d3348;
+  border-radius: 12px;
+  padding: 28px;
+  width: 100%;
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  background: #0f1117;
+  border: 1px solid #2d3348;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 1rem;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border-color: #6366f1;
+}
+
+input[type="number"] { width: 140px; }
+
+.run-btn {
+  margin-top: 16px;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 32px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.run-btn:hover { background: #4f46e5; }
+.run-btn:active { background: #4338ca; }
+
+.result-label {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.result-box {
+  position: relative;
+  background: #0f1117;
+  border: 1px solid #2d3348;
+  border-radius: 8px;
+  padding: 12px 48px 12px 14px;
+  min-height: 52px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: #a5b4fc;
+  word-break: break-all;
+  line-height: 1.6;
+}
+
+.result-box.empty { color: #374151; }
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #2d3348;
+  border: none;
+  border-radius: 6px;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.copy-btn:hover { background: #6366f1; color: #fff; }
+.copy-btn.copied { background: #10b981; color: #fff; }
+
+.copy-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+.trim-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.trim-row label { margin-bottom: 0; white-space: nowrap; }

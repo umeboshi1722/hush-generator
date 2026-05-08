@@ -38,6 +38,49 @@ h1 {
   margin-bottom: 14px;
 }
 
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.card-header .card-title { margin-bottom: 0; }
+
+.card-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-body { margin-top: 18px; }
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #2d3348;
+  border: none;
+  border-radius: 6px;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.toggle-btn:hover { background: #6366f1; color: #fff; }
+.toggle-btn[aria-expanded="true"] { background: #6366f1; color: #fff; }
+
+.toggle-icon {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.2s;
+}
+
+.toggle-btn[aria-expanded="true"] .toggle-icon { transform: rotate(180deg); }
+
 label {
   display: block;
   font-size: 0.85rem;
@@ -88,11 +131,10 @@ input[type="number"] { width: 140px; }
 }
 
 .result-box {
-  position: relative;
   background: #0f1117;
   border: 1px solid #2d3348;
   border-radius: 8px;
-  padding: 12px 48px 12px 14px;
+  padding: 12px 14px;
   min-height: 52px;
   font-family: 'Consolas', 'Courier New', monospace;
   font-size: 0.82rem;
@@ -104,9 +146,6 @@ input[type="number"] { width: 140px; }
 .result-box.empty { color: #374151; }
 
 .copy-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
   background: #2d3348;
   border: none;
   border-radius: 6px;
@@ -118,6 +157,7 @@ input[type="number"] { width: 140px; }
   align-items: center;
   gap: 4px;
   transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
 }
 
 .copy-btn:hover { background: #6366f1; color: #fff; }
@@ -125,14 +165,19 @@ input[type="number"] { width: 140px; }
 
 .copy-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 
-.trim-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
+.trim-inline {
+  display: inline;
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-bottom: 0;
+  white-space: nowrap;
 }
 
-.trim-row label { margin-bottom: 0; white-space: nowrap; }
+.card-header-actions input[type="number"] {
+  width: 80px;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+}
 
 textarea {
   width: 100%;

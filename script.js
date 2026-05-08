@@ -85,6 +85,20 @@ function copyText(spanId, btnId) {
   });
 }
 
+function toggleCard(btn) {
+  const body = btn.closest('.card').querySelector('.card-body');
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  if (expanded) {
+    body.hidden = true;
+    btn.setAttribute('aria-expanded', 'false');
+    btn.firstChild.textContent = '表示';
+  } else {
+    body.hidden = false;
+    btn.setAttribute('aria-expanded', 'true');
+    btn.firstChild.textContent = '非表示';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('inputText').addEventListener('keydown', e => {
     if (e.key === 'Enter') runHash();
